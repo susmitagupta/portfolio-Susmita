@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7e7cb3630d.js" crossorigin="anonymous"></script>
+
+    
 </head>
 <body>
+
+    <!-- -------------Header------------------>
     <div id="header">
         <div class="container">
             <nav>
@@ -27,7 +34,93 @@
         </div>
     </div>
 
-    
-    
+    <!-- -------------About---------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos quidem corporis temporibus quo asperiores nesciunt nihil, ad aperiam unde vitae vero animi aliquid dolorum maiores blanditiis laboriosam? Consectetur, assumenda repellendus!
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                           <li><span>JAVA/J2EE</span><br>Development of multi-tire application modules using primarty JAVA/J2EE technologies, efficiently using Spring Boot, ORM tools like Hibernate</li>
+                           <li><span>MERN</span><br>Development of websites using HTML, CSS, JAVA Script,Angular JS and MERN technology</li>
+                           <li><span>MySQL</span><br>I am well-versed in CRUD operations.</li>
+                           <li><span>Alteryx</span><br>I have experience in workflow designing using Alteryx tools</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                           <li><span>2021 - current</span><br>Working as a software Developer at Accenture Private Limited.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                           <li><span>2021-current</span><br>Software Developer at Accenture Private Limited</li>
+                           <li><span>2015-1019</span><br>B.Tech in Electrical Engineering from BCREC, Durgapur</li>
+                           <li><span>2015</span><br>Higher Secondary</li>
+                           <li><span>2013</span><br>Secondery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ---------------Services------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1> 
+        <div class="services-list">
+           <div>
+            <i class="fa-brands fa-java"></i>
+            <h2>JAVA/J2EE</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est impedit eaque eum id excepturi atque cupiditate? Accusamus ad animi perferendis saepe consectetur unde cupiditate cumque!</p>
+            <a href="#">Learn more</a>
+           </div> 
+           <div>
+            <i class="fa-brands fa-react"></i>
+            <h2>MERN</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est impedit eaque eum id excepturi atque cupiditate? Accusamus ad animi perferendis saepe consectetur unde cupiditate cumque!</p>
+            <a href="#">Learn more</a>
+           </div> 
+           <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Alteryx</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est impedit eaque eum id excepturi atque cupiditate? Accusamus ad animi perferendis saepe consectetur unde cupiditate cumque!</p>
+            <a href="#">Learn more</a>
+           </div> 
+        </div>  
+    </div>
+</div>
+
+
+
+
+
+ <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link") ;
+        }
+
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab") ;
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+ </script>   
 </body>
 </html>
